@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Basic CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #333232;
+    color: #000000;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    padding-bottom: 50px; /* Add padding for footer */
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-left h1 {
+    color: #ff5900;
+    font-size: 1.5rem;
+}
+
+.navbar-right {
+    margin-right: 4rem;
+}
+
+.navbar-right a {
+    color: #00ccff;
+    text-decoration: none;
+    margin-left: 4rem;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-right a:hover {
+    color: #3498db;
+}
+
+#navbar-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Section General Styles */
+section {
+    padding: 6rem 2rem 4rem 2rem; /* Add extra top padding for fixed navbar */
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Home Section */
+#home {
+    background-image: url('desktop-wallpaper-portfolio.jpg');
+    background-size: cover; /* This ensures the image covers the entire section */
+    background-repeat: no-repeat; /* This prevents the image from repeating */
+    background-position: center; /* This centers the image within the section */
+    width: 100%; /* Ensures the section takes up the full width of the page */
+    height: 100vh; /* Sets the height to 100% of the viewport height */
+    display: flex;
+    align-items: center;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+}
+
+.home-left {
+    text-align: center;
+    padding-top: 1.5rem;
+
+}
+
+.home-left img {
+    width: 50%;
+    border-radius: 50%;
+    background-color: #cfecff;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.home-left h2 {
+    color: #d9ecff;
+    font-size: 1.5rem;
+}
+
+.home-right {
+    max-width: 500px;
+    margin-left: 13rem;
+}
+
+.home-right h3 {
+    color: #cfecff;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.home-right p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    width: 100%;
+    color: #dadada;
+}
+
+/* Skills Section */
+#skills {
+    background-color: #ffffff;
+    padding: 4rem;
+    height: auto; /* Change height to auto */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+}
+
+#skills h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#skills .dropdown {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.dropbtn {
+    background-color: hsla(228, 100%, 52%, 0.784);
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.dropbtn:hover {
+    background-color: #24a0ff;
+}
+
+.icon {
+    font-size: 1rem;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f2eeeef1;
+    border-radius: 5px;
+    z-index: 1;
+    margin-top: 0.5rem;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+/* Projects Section */
+#projects {
+    background-color: #f2f5f6;
+    padding: 4rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    /* Add margin to separate from the contact section */
+    overflow: hidden; /* Prevent overflow */
+}
+
+#projects h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 100%; /* Ensure full width */
+}
+
+/* Project Boxes */
+.project-box {
+    width: 300px;
+    margin: 1rem;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-box h3 {
+    margin: 1rem 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.project-box a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.project-box a:hover {
+    color: #2980b9;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f5ffff;
+    padding: 4rem;
+    height: auto; /* Change height to auto */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevent overflow */
+}
+
+#contact h2 {
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0.1rem 0.6rem 1rem 0.1rem #cccbcb;
+    border-radius: 1rem;
+    flex-direction: column;
+    width: 30%;
+    margin: 0 auto;
+}
+
+#contact label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+#contact input, #contact textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#contact textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#contact input[type="submit"] {
+    background-color: #0019b8d4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #00000077;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: -92px;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design for Skills Section */
+@media (max-width: 768px) {
+    #skills .dropdown {
+        width: 100%;
+    }
+}
+
+/* Responsive Design for Projects Section */
+@media (max-width: 768px) {
+    #projects {
+        padding-top: 4rem; /* Adjust padding for smaller screens */
+    }
+
+    .project-box {
+        width: 100%;
+        max-width: 500px; /* Optional: Limit the width for smaller screens */
+    }
+}
+
+/* Responsive Design for Navbar and Home Section */
+@media (max-width: 768px) {
+    .navbar-right {
+        display: none;
+    }
+
+    #navbar-toggle {
+        display: block;
+    }
+
+    nav.active .navbar-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #00000075;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-right > a {
+        color: white;
+        margin-top: 1rem;
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem; /* Adjust padding for smaller screens */
+    }
+
+    .home-left img {
+        width: 100%;
+        max-width: 200px; /* Limit the image width for smaller screens */
+        margin-top: 2.5rem;
+    }
+
+    .home-right {
+        margin: 2rem 0 0;
+        width: 100%; /* Ensure the text takes the full width */
+        padding: 0 1rem; /* Add padding for better spacing */
+    }
+
+    .home-right p {
+        font-size: 0.8rem; /* Adjust font size for better readability */
+    }
+}
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    #contact form {
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
